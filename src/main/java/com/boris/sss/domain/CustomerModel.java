@@ -1,11 +1,11 @@
-package com.javadevjournal.domain;
-
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+package com.boris.sss.domain;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.GenerationType;
+import javax.persistence.GeneratedValue;
+
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Entity
 public class CustomerModel {
@@ -18,10 +18,10 @@ public class CustomerModel {
     private String password;
 
     public CustomerModel() {
-        //System.out.println("in constructor");
-        //BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-        //String encodedPasswd = encoder.encode("passwd");
-        //System.out.println("encoded passwd [" + encodedPasswd + "]");
+        System.out.println("in constructor");
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        String encodedPasswd = encoder.encode("passwd");
+        System.out.println("encoded passwd [" + encodedPasswd + "]");
     }
 
     public Long getId() {
